@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Website Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <section class="head">
+        <nav>
+            <a href="index.html"><img src="images/logo.png"><span id="logo-head">highpitch</span></a>
+            <div class="slider"></div>
+            <div class="navigation" id="navbar">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="">home</a></li>
+                    <li><a href="">about</a></li>
+                    <li><a href="">blog</a></li>
+                    <li><a href="">contact</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="outer"></div>
+        <div class="text-box">
+            <h1>EVOLUTION OF MUSIC</h1>
+            <p>Part of every known society, past and present, and common to all human cultures across the globe,
+                <br> If
+                Music was a Place — then Jazz would be the City, Folk would be the Wilderness, Rock would be the
+                Road
+                and Classical would be a Temple.
+            </p>
+            <a href=""><img src="Images/button.gif"></a>
+            <img src="images/feat.jpg" id="feat">
+            <img src="images/feat1.png" id="feat1">
+        </div>
+    </section>
+
+    <!----------------- Js for toggle ------------------->
+    <script>
+        var n = document.getElementById("navbar");
+        function showMenu() {
+            n.style.right = "0";
+        }
+        function hideMenu() {
+            n.style.right = "-200px";
+        }
+    </script>
+</body>
+
+</html>
