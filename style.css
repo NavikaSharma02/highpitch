@@ -40,15 +40,6 @@ nav a img {
 .navigation ul {
     flex: 1;
     text-align: right;
-}
-
-.navigation ul li {
-    list-style: none;
-    display: inline-block;
-    padding: 10px 20px;
-    position: relative;
-    background-color: #2d00b4;
-    transition: all 0.5s cubic-bezier(0.32, 0, 0.67, 0);
     animation: movedown 1s 1 0.5s forwards;
     visibility: hidden;
 }
@@ -62,6 +53,15 @@ nav a img {
         transform: translateY(0);
         visibility: visible;
     }
+}
+
+.navigation ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px 20px;
+    position: relative;
+    background-color: #2d00b4;
+    transition: color 2s ease-in;
 }
 
 .navigation ul li:hover {
@@ -184,13 +184,16 @@ nav .fa {
         display: none;
     }
 
+    .navigation ul{
+        animation: none;
+        visibility: visible;
+    }
+
     .navigation ul li {
         display: block;
         margin: 15px 0;
         background-color: #4661ff;
         transition: none;
-        animation: none;
-        visibility: visible;
     }
 
     .navigation ul li:hover {
