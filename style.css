@@ -116,7 +116,7 @@ nav a img {
 }
 
 .text-box p {
-    margin: 10px 0px 40px;
+    margin: 10px -8px 40px;
     font-size: 16px;
     font-family: 'Tajawal', sans-serif;
 }
@@ -170,7 +170,7 @@ nav .fa {
 
 @media(max-width: 800px) {
     .text-box h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .text-box p {
@@ -255,8 +255,8 @@ nav .fa {
     }
 
     .text-box a img {
-        height: 3vh;
-        width: 12vh;
+        height: 4vh;
+        width: 15vh;
     }
 
     .outer {
@@ -272,7 +272,25 @@ nav .fa {
         }
 
         to {
-            width: 135px;
+            width: 140px;
         }
     }
+}
+
+/****************************** Second *******************************/
+
+.up{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+h1{
+    font-size: 40px;
+    font-family: 'Orbitron', sans-serif;
+}
+p{
+    font-size: 16px;
+    font-family: 'Tajawal', sans-serif;
+    padding: 10px;
 }
