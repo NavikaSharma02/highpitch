@@ -7,7 +7,7 @@
     height: 100vh;
     width: 100%;
     background-color: rgba(0, 0, 0);
-    opacity: 0.95;
+    opacity: 0.99;
     background-image: url('Images/back.jpg');
     background-position: center;
     background-size: cover;
@@ -42,75 +42,62 @@ nav a img {
     text-align: right;
 }
 
-.slider {
-    position: absolute;
-    right: 30px;
-    width: 10px;
-    height: 40px;
-    z-index: -1;
-    border-radius: 50px;
-    background-image: linear-gradient(to bottom right, white, rgb(0, 68, 255));
-    animation: box 2s ease-in-out 1 0.5s forwards;
+.navigation ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px 20px;
+    position: relative;
+    background-color: #2d00b4;
+    transition: all 0.5s cubic-bezier(0.32, 0, 0.67, 0);
+    animation: movedown 1s 1 0.5s forwards;
+    visibility: hidden;
 }
 
-@keyframes box {
+@keyframes movedown {
+    0%{
+        transform: translateY(-100px);
+        visibility: visible;
+    }
+    100%{
+        transform: translateY(0);
+        visibility: visible;
+    }
+}
+
+.navigation ul li:hover {
+    transform-style: preserve-3d;
+    transform: rotateX(45deg);
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    color: rgb(112, 160, 255);
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 19px;
+    transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
+}
+
+.navigation ul li a:hover {
+    color: white;
+    transition: color 1s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.outer {
+    height: 80vh;
+    width: 10px;
+    position: relative;
+    border-radius: 0 70px 70px 0;
+    background-color: rgb(100, 165, 255);
+    animation: moveright 1s ease-in 1 1s forwards;
+}
+
+@keyframes moveright {
     from {
         width: 10px;
     }
 
     to {
-        width: 600px;
-    }
-}
-
-.navigation ul li {
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
-}
-
-.navigation ul li a {
-    text-decoration: none;
-    color: #ffffff;
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-size: 18px;
-}
-
-.navigation ul li a:hover {
-    font-weight: bold;
-    color: #002a5d;
-}
-
-.navigation ul li a::before {
-    content: '';
-    position: absolute;
-    margin-left: -10px;
-    width: 6%;
-    height: 0%;
-    border-left: 3px solid #2d00b4;
-    display: block;
-    transition: 0.5s ease-in;
-}
-
-.navigation ul li a:hover::before {
-    height: 60%;
-}
-
-.outer {
-    height: 600px;
-    width: 10px;
-    position: relative;
-    border-radius: 0 100px 100px 0;
-    background-color: rgb(131, 183, 255);
-    animation: moveright 1s ease-in 1 2s forwards;
-}
-@keyframes moveright {
-    from{
-        width: 10px;
-    }
-    to{
-        width: 220px;
+        width: 230px;
     }
 }
 
@@ -130,14 +117,14 @@ nav a img {
 
 .text-box p {
     margin: 10px 0px 40px;
-    font-size: 13px;
-    font-family: 'Electrolize', sans-serif;
+    font-size: 16px;
+    font-family: 'Tajawal', sans-serif;
 }
 
 .text-box a img {
-    height: 40px;
+    height: 5vh;
     width: 10%;
-    border: 1px solid white;
+    box-shadow: 1px 2px 3px 2px rgb(54, 54, 54);
     display: inline-block;
     text-decoration: none;
     position: relative;
@@ -154,15 +141,17 @@ nav .fa {
     position: absolute;
     top: 60%;
     right: 0;
-    animation: f 1s ease-in-out 1 3s forwards;
+    animation: f 2s ease-in-out 1 1.5s forwards;
     visibility: hidden;
 }
+
 @keyframes f {
-    0%{
-        transform: scale(0.5);
+    0% {
+        transform: scale(0);
         visibility: visible;
     }
-    100%{
+
+    100% {
         transform: scale(1);
         visibility: visible;
     }
@@ -175,32 +164,73 @@ nav .fa {
     position: absolute;
     top: 30%;
     right: 160px;
-    animation: f 1s ease-in-out 1 4s forwards;
+    animation: f 1s ease-in-out 1 2.5s forwards;
     visibility: hidden;
 }
 
-@media(max-width: 700px) {
+@media(max-width: 800px) {
     .text-box h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
+    }
+
+    .text-box p {
+        font-size: 15px;
     }
 
     #logo-head,
-    .slider {
+    .slider,
+    #feat,
+    #feat1 {
         display: none;
     }
 
     .navigation ul li {
         display: block;
+        margin: 15px 0;
+        background-color: #4661ff;
+        transition: none;
+        animation: none;
+        visibility: visible;
+    }
+
+    .navigation ul li:hover {
+        transform: none;
+        transform-style: none;
+    }
+
+    .navigation ul li a {
+        font-size: 20px;
+        color: white;
+        transition: none;
+    }
+
+    .navigation ul li a:hover {
+        font-weight: bold;
+        color: #002a5d;
+    }
+
+    .navigation ul li a::before {
+        content: '';
+        position: absolute;
+        margin-left: -10px;
+        width: 6%;
+        height: 0%;
+        border-left: 3px solid #2d00b4;
+        display: block;
+        transition: 0.5s ease-in;
+    }
+
+    .navigation ul li a:hover::before {
+        height: 60%;
     }
 
     .navigation {
-        position: absolute;
+        position: fixed;
         top: 0;
-        right: -200px;
+        right: -100%;
         background-color: #4661ff;
         height: 100vh;
-        width: 200px;
-        text-align: left;
+        width: 100%;
         z-index: 2;
         transition: 1s;
     }
@@ -213,11 +243,33 @@ nav .fa {
     }
 
     .navigation ul {
-        padding: 40px;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        height: 90%;
+        transform: translate(-50%, -50%);
+        text-align: center;
     }
 
     .text-box a img {
-        height: 30px;
-        width: 100px;
+        height: 3vh;
+        width: 12vh;
+    }
+
+    .outer {
+        height: 70vh;
+        width: 8px;
+        border-radius: 0 70px 70px 0;
+        animation: moveright 1s ease-in 1 1s forwards;
+    }
+
+    @keyframes moveright {
+        from {
+            width: 8px;
+        }
+
+        to {
+            width: 135px;
+        }
     }
 }
