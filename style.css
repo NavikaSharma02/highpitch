@@ -271,19 +271,19 @@ nav .fa {
     }
 
     .outer {
-        height: 70vh;
-        width: 8px;
+        height: 72vh;
+        width: 2vh;
         border-radius: 0 70px 70px 0;
         animation: moveright 1s ease-in 1 1s forwards;
     }
 
     @keyframes moveright {
         from {
-            width: 8px;
+            width: 2vh;
         }
 
         to {
-            width: 140px;
+            width: 20vh;
         }
     }
 }
@@ -414,12 +414,12 @@ h2 {
     }
     
     .card img {
-        height: 45vh;
+        height: 300px;
     }
     
     .card:hover img {
         top: 70%;
         left: 50%;
-        height: 40vh;
+        height: 200px;
     }
 }
